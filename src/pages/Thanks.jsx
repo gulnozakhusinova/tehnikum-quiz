@@ -1,6 +1,6 @@
 import React from "react";
 
-const Thanks = () => {
+export const Thanks = () => {
   return (
     <div className="container">
       <div className="wrapper">
@@ -15,6 +15,4 @@ const Thanks = () => {
       </div>
     </div>
   );
-};
-
-export default Thanks;
+}

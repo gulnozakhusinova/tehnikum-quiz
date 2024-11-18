@@ -1,13 +1,19 @@
 import React from "react";
-import Welcome from "./pages/Welcome";
+// import Welcome from "./pages/Welcome";
 import "./styles/main.css";
+// import StepOne from "./pages/StepOne";
+// import Step2 from "./pages/StepTwo"
+import { Welcome,StepOne,StepTwo,StepThree,StepFour,Thanks } from "./pages";
 
-const App = () => {
+export const App = () => {
   return (
     <div className="App">
-      <Welcome />
+      <Welcome /> 
+       <StepOne/>
+      <StepTwo/>
+      <StepThree/>
+      <StepFour/>
+      <Thanks/>
     </div>
   );
 };
-
-export default App;

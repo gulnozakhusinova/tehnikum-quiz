@@ -1,6 +1,8 @@
 import React from "react";
+// import { Button } from "../components/button/Button";
+import {Title,Button} from "../components"
 
-const StepThree = () => {
+export const StepThree = () => {
   return (
     <div className="container">
       <div className="wrapper">
@@ -20,7 +22,7 @@ const StepThree = () => {
             </div>
           </div>
           <div className="question">
-            <h2>3. Занимательный вопрос</h2>
+          <Title text={"3. Занимательный вопрос"}/>
             <ul className="emoji-variants">
               <li className="variant-wrapper">
                 <input required type="radio" name="variant" id="variant-1" />
@@ -51,14 +53,10 @@ const StepThree = () => {
                 </label>
               </li>
             </ul>
-            <button type="button" disabled id="next-btn">
-              Далее
-            </button>
+            <Button text={"Далее"}/>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default StepThree;
