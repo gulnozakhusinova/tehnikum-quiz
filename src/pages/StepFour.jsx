@@ -6,6 +6,7 @@ export const StepFour = () => {
     <div className="container">
       <div className="wrapper">
         <div className="emoji-quiz">
+{/* 
           <div className="indicator">
             <div className="indicator__text">
               <span className="indicator__description">
@@ -19,7 +20,9 @@ export const StepFour = () => {
               <div className="indicator__unit indicator__unit-3 _active"></div>
               <div className="indicator__unit indicator__unit-4"></div>
             </div>
-          </div>
+          </div> */}
+
+
           <div className="question">
           <Title text={"4. Занимательный вопрос"}/>
             <ul className="level-variants">

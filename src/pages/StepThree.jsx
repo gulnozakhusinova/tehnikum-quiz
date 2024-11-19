@@ -7,7 +7,8 @@ export const StepThree = () => {
     <div className="container">
       <div className="wrapper">
         <div className="emoji-quiz">
-          <div className="indicator">
+
+          {/* <div className="indicator">
             <div className="indicator__text">
               <span className="indicator__description">
                 Скидка за прохождение опроса:
@@ -20,7 +21,9 @@ export const StepThree = () => {
               <div className="indicator__unit indicator__unit-3"></div>
               <div className="indicator__unit indicator__unit-4"></div>
             </div>
-          </div>
+          </div> */}
+
+
           <div className="question">
           <Title text={"3. Занимательный вопрос"}/>
             <ul className="emoji-variants">

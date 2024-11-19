@@ -1,12 +1,16 @@
 import React from "react";
-import {Title,Button} from "../components"
- 
+import { Title, Button, Indecator} from "../components"
+
 export const StepOne = () => {
   return (
     <div className="container">
       <div className="wrapper">
         <div className="single-input-quiz">
-          <div className="indicator">
+
+          <Indecator description={" Скидка за прохождение опроса:"}
+            discount={"%0000"}
+          />
+          {/* <div className="indicator">
             <div className="indicator__text">
               <span className="indicator__description">
                 Скидка за прохождение опроса:
@@ -19,9 +23,9 @@ export const StepOne = () => {
               <div className="indicator__unit indicator__unit-3"></div>
               <div className="indicator__unit indicator__unit-4"></div>
             </div>
-          </div>
+          </div> */}
           <div className="question">
-           <Title text={"1. Занимательный вопрос"}/>
+            <Title text={"1. Занимательный вопрос"} />
             <label className="input-wrapper">
               <input
                 required
@@ -33,7 +37,7 @@ export const StepOne = () => {
                 Введите номер в правильном формате например
               </span>
             </label>
-            <Button text={"Далее"}/>
+            <Button text={"Далее"} />
           </div>
         </div>
       </div>
