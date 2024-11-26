@@ -35,6 +35,8 @@ export function App() {
         description="Скидка за прохождение опроса"
         discount={progress * 5}
         progress={progress}
+
+    
       />
       <div style={{ marginTop: "20px", fontSize: "18px", color: "#555" }}>
         Прокрутите вниз, чтобы увеличить прогресс!
