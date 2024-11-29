@@ -2,7 +2,8 @@ import React from "react";
 import "./styles/main.css";
 import { Routes, Route } from "react-router-dom"
 import { Welcome,StepOne,StepTwo,StepThree,StepFour,Thanks,Step } from "./pages";
-import { Indecator } from "./components/progress-bar/Indecator";
+// import { Indecator } from "./components/progress-bar/Indecator";
+
 
 
 

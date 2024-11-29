@@ -20,7 +20,7 @@ export const StepOne = () => {
                 Введите номер в правильном формате например
               </span>
             </label>
-            <Button text={"Далее"} />
+            <Button text={"Далее"}  />
           </div>
         </div>
       </div>

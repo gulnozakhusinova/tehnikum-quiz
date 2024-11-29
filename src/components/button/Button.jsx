@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Button = ({ text }) => {
+export const Button = ({ text ,type,id, ...props}) => {
   return (
-    <button disabled type="submit" id="next-btn">
+    <button type={type} id={id} {...props}  >
       {text}
     </button>
   )

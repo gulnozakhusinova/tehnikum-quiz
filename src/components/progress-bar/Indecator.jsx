@@ -24,14 +24,8 @@ export const Indecator = ({ steps, activeStep }) => {
                 indicator__unit: true,
                 [`indicator__unit-${index + 1}`]: true,
                 _active: index < activeStep,
-                _current : index === activeStep - 1
+                _current: index === activeStep - 1
               })}
-
-            // {
-            //   "indicator__unit--active": index < activeStep,
-            //   "indicator__unit--current": index === activeStep - 1,
-            // }
-
             />
           ))}
       </div>
