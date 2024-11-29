@@ -1,44 +1,29 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react"
-// import Welcome from "./pages/Welcome";
 import "./styles/main.css";
-// import StepOne from "./pages/StepOne";
-// import Step2 from "./pages/StepTwo"
-import { Welcome, StepOne, StepTwo, StepThree, StepFour, Thanks } from "./pages";
- 
+import { Routes, Route } from "react-router-dom"
+import { Welcome,StepOne,StepTwo,StepThree,StepFour,Thanks,Step } from "./pages";
+import { Indecator } from "./components/progress-bar/Indecator";
+
+
+
 
 export const App = () => {
-  const [time, setTime] = useState(new Date());
-
- 
-  useEffect(() => {
-    const timerId = setInterval(() => {
-      const now = new Date();
-      console.log("Current Time:", now); // Log the time to the console
-      setTime(now);
-    }, 1000);
-
-    // Cleanup the interval on component unmount
-    return () => clearInterval(timerId);
-
-  }, []);
-
-  const formatTime = (date) => {
-    const hours = date.getHours().toString().padStart(2, "0");
-    const minutes = date.getMinutes().toString().padStart(2, "0");
-    const seconds = date.getSeconds().toString().padStart(2, "0");
-    return `${hours}:${minutes}:${seconds}`;
-    
-  };
-
-
-
   return (
-    <div style={{ fontSize: "2em", textAlign: "center", marginTop: "20px" }}>
-      <h1>Current Time:</h1>
-      <div>{formatTime(time)}</div>
+    <div className="App">
+       {/* <Indecator/> */}
+       <Routes>
+        <Route index element={<Welcome />} />
+          <Route path="/step" element={<Step />}>
+            <Route index path="1" element={<StepOne />} />
+            <Route path="2" element={<StepTwo />} />
+            <Route path="3" element={<StepThree />} />
+            <Route path="4" element={<StepFour />} />
+          </Route>
+
+        <Route path="/thanks" element={<Thanks />} />
+      </Routes>
     </div>
-  );
+  )
 };
 
 

@@ -149,7 +149,7 @@ button:enabled:active {
 
 .indicator {
   position: fixed;
-  top: 70px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   width: 388px;
@@ -173,6 +173,11 @@ button:enabled:active {
 .indicator__unit._active {
   background-color: #ffeb80;
   border: 0;
+}
+
+.indicator__unit._current {
+  background-color: white;
+  border: 2px solid #ffeb80;
 }
 
 .welcome h1 {

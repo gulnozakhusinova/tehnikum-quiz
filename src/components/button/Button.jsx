@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Button = ({text}) => {
+export const Button = ({ text }) => {
   return (
     <button disabled type="submit" id="next-btn">
-            {text}
-            </button>
+      {text}
+    </button>
   )
 }
 // props eto object
