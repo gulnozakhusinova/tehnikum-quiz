@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: "TT Hoves";
   font-size: 16px;
@@ -198,6 +199,12 @@ button:enabled:active {
 .question input[type=text] {
   margin-bottom: 32px;
 }
+
+
+.btnL{
+  width: 300px;
+}
+
 
 .variants {
   list-style: none;

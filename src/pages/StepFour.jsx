@@ -1,10 +1,11 @@
 import React from "react";
-import {Title,Button} from "../components"
+import {Title,Button,Indecator} from "../components"
 
 export const StepFour = () => {
   return (
     <div className="container">
       <div className="wrapper">
+      <Indecator steps={4} activeStep={4} />
         <div className="emoji-quiz">
           <div className="question">
           <Title text={"4. Занимательный вопрос"}/>

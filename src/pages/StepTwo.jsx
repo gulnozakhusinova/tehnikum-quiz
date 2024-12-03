@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Title, Option } from "../components";
+import { Button, Title, Option,Indecator } from "../components";
 
 
 export const StepTwo = () => {
@@ -26,6 +26,7 @@ export const StepTwo = () => {
   return (
     <div className="container">
       <div className="wrapper">
+      <Indecator steps={2} activeStep={2} />
         <div className="variants-quiz">
           <div className="question">
             <Title text={"2. Занимательный вопрос"} />

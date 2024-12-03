@@ -5,8 +5,8 @@ export const StepOne = () => {
   return (
     <div className="container">
       <div className="wrapper">
+      <Indecator steps={1} activeStep={1} />
         <div className="single-input-quiz">
-
           <div className="question">
             <Title text={"1. Занимательный вопрос"} />
             <label className="input-wrapper">
@@ -20,7 +20,7 @@ export const StepOne = () => {
                 Введите номер в правильном формате например
               </span>
             </label>
-            <Button text={"Далее"}  />
+            <Button text={"Далее"} />
           </div>
         </div>
       </div>

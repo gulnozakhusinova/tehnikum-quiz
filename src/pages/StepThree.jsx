@@ -1,12 +1,13 @@
 import React from "react";
 // import { Button } from "../components/button/Button";
-import {Title,Button} from "../components"
+import {Title,Button,Indecator} from "../components"
 
 
 export const StepThree = () => {
   return (
     <div className="container">
       <div className="wrapper">
+      <Indecator steps={3} activeStep={3} />
         <div className="emoji-quiz">
 
           <div className="question">
