@@ -2,8 +2,9 @@ import React from "react";
 import "./styles/main.css";
 import { Routes, Route } from "react-router-dom"
 import { Welcome, StepOne, StepTwo, StepThree, StepFour, Thanks, Step } from "./pages";
-// import { Indecator } from "./components/progress-bar/Indecator";
 import { useEffect, useState } from "react";
+import { Switch } from "./components";
+
 
 
 
@@ -27,35 +28,7 @@ export const App = () => {
   return (
     <>
       <nav style={{ display: 'flex', marginLeft: 'auto', width: '300px' }}>
-
-        <button
-          onClick={() => setIsDark(false)}
-          style={{
-            padding: "10px 20px",
-            margin: "10px",
-            backgroundColor: "#f0f0f0",
-            border: "1px solid #ccc",
-            cursor: "pointer",
-          }}
-        >
-          Светлый режим
-        </button>
-
-        <button
-          onClick={() => setIsDark(true)}
-          style={{
-            padding: "10px 20px",
-            margin: "10px",
-            backgroundColor: "#333",
-            color: "#fff",
-            border: "1px solid #666",
-            cursor: "pointer",
-          }}
-        >
-          Тёмный режим
-        </button>
-
-
+        <Switch />
       </nav>
 
       <Routes>

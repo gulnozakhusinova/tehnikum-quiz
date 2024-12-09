@@ -15,7 +15,7 @@ export const Indecator = ({ steps, activeStep }) => {
         </span>
       </div>
       <div className="indicator__progressbar">
-        {Array(8)
+        {Array(4)
           .fill(0)
           .map((_, index) => (
             <div

@@ -8,6 +8,7 @@ export const Step = () => {
       <div className="wrapper">
         {/* <Indecator steps={10} activeStep={5} /> */}
         <Outlet />
+       
       </div>
     </div>
   );

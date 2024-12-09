@@ -1,8 +1,14 @@
-import React from "react";
-import { Button, Title, Option,Indecator } from "../components";
+import React, { useState } from "react";
+import { Button, Title, Option, Indecator } from "../components";
+import { useNavigate } from "react-router-dom";
+import { ArrowBack, ThreeDRotation } from '@mui/icons-material';
+
+
 
 
 export const StepTwo = () => {
+  const navigate = useNavigate();
+  const [selectedAnswer, setSelectedAnswer] = useState(null); // State to track selected answer
 
   const answers = [
     {
@@ -21,29 +27,57 @@ export const StepTwo = () => {
       id: '4c40902d-bc82-479c-a690-0386c8811ad8',
       answer: 'Ваш ответ 44'
     }
-  ]
+  ];
+
+  // Handle option selection
+  const handleOptionSelect = (id) => {
+    setSelectedAnswer(id);
+  };
+
+  // Handle button click to navigate to next step
+  const handleNextClick = () => {
+    if (selectedAnswer) {
+      navigate('/step/3');
+    }
+  }
+
+  const nextClick = () => {
+    navigate('/step/1');
+  }
 
   return (
     <div className="container">
+      <div className="iconBtn" onClick={nextClick} >
+        <ArrowBack />
+      </div>
       <div className="wrapper">
-      <Indecator steps={2} activeStep={2} />
+        <Indecator steps={2} activeStep={2} />
         <div className="variants-quiz">
           <div className="question">
             <Title text={"2. Занимательный вопрос"} />
             <ul className="variants">
-
-              {
-                answers.map(({ id, answer }) => (
-                  <Option key={id} id={id} answer={answer} />
-                ))
-              }
-
+              {answers.map(({ id, answer }) => (
+                <Option
+                  key={id}
+                  id={id}
+                  answer={answer}
+                  isSelected={id === selectedAnswer} // Determine if this option is selected
+                  onSelect={handleOptionSelect} // Pass selection handler
+                />
+              ))}
             </ul>
-            <Button text={"Далее"} />
+            {/* Button is enabled only if an option is selected */}
+            <Button
+              text={"Далее"}
+              disabled={!selectedAnswer}
+              onClick={handleNextClick}
+            />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+
 
