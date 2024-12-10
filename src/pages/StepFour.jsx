@@ -32,7 +32,7 @@ export const StepFour = () => {
         <Indecator steps={4} activeStep={4} />
         <div className="emoji-quiz">
           <div className="question">
-            <Title text={"4. Занимательный вопрос"} />
+            <Title text={"4. Хотите продолжать обучение?"} />
             <ul className="level-variants">
               {/* List of options */}
               {[1, 2, 3, 4, 5].map((value) => (

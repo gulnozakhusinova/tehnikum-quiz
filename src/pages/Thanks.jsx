@@ -13,7 +13,7 @@ export const Thanks = () => {
     setIsVisible(prevState => !prevState);
   };
   const nextClick = () => {
-    navigate('/step/1');
+    navigate('/step/4');
   }
 
   return (

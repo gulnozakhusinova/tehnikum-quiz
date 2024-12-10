@@ -30,7 +30,7 @@ export const StepOne = () => {
         <div className="single-input-quiz">
           <form onSubmit={onSubmitHandler}>
             <div className="question">
-              <Title text={"1. Занимательный вопрос"} />
+              <Title text={"1. В какой сфере учитесь или работаете?"} />
               <label className="input-wrapper">
                 <input
                   required

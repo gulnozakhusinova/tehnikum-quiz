@@ -30,7 +30,7 @@ export const StepThree = () => {
         <Indecator steps={3} activeStep={3} />
         <div className="emoji-quiz">
           <div className="question">
-            <Title text={"3. Занимательный вопрос"} />
+            <Title text={"3. Выберите подходящий к вам характер."} />
             <ul className="emoji-variants">
               <li className="variant-wrapper">
                 <input
@@ -44,7 +44,7 @@ export const StepThree = () => {
                 />
                 <label htmlFor="variant-1">
                   <img src="/img/laugh.png" alt="laugh" />
-                  <p>Ваш ответ 1</p>
+                  <p>Веселый</p>
                 </label>
               </li>
               <li className="variant-wrapper">
@@ -59,7 +59,7 @@ export const StepThree = () => {
                 />
                 <label htmlFor="variant-2">
                   <img src="/img/hearts.png" alt="hearts" />
-                  <p>Ваш ответ 2</p>
+                  <p>Трудолюбивый</p>
                 </label>
               </li>
               <li className="variant-wrapper">
@@ -74,7 +74,7 @@ export const StepThree = () => {
                 />
                 <label htmlFor="variant-3">
                   <img src="/img/smirk.png" alt="smirk" />
-                  <p>Ваш ответ 3</p>
+                  <p>Серьезный</p>
                 </label>
               </li>
               <li className="variant-wrapper">
@@ -89,7 +89,7 @@ export const StepThree = () => {
                 />
                 <label htmlFor="variant-4">
                   <img src="/img/fright.png" alt="fright" />
-                  <p>Ваш ответ 4</p>
+                  <p>Любопытный</p>
                 </label>
               </li>
             </ul>
