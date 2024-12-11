@@ -11,18 +11,6 @@ import { Switch } from "./components";
 
 
 export const App = () => {
-  const [isDark, setIsDark] = useState(false);
-
-
-
-  // Изменение цвета фона body при изменении состояния isDark
-  useEffect(() => {
-    document.body.style.backgroundColor = isDark ? "#333" : "#fff";
-    document.body.style.color = isDark ? "#fff" : "#000"; // Опционально: изменение цвета текста
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  }, [isDark]);
-
-
 
 
   return (

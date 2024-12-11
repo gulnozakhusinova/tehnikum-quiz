@@ -4,27 +4,30 @@ import "./Switch.css"
 export const Switch = () => {
 
   const [isNightMode, setIsNightMode] = useState(() => {
-    
+
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme === 'dark'; 
+    return savedTheme === 'dark';
   });
 
-  useEffect(() => {
-    document.body.style.backgroundColor = isNightMode ? "#333" : "#fff";
-    document.body.style.color = isNightMode ? "#fff" : "#000"; 
-    document.body.style.color = isNightMode ? "#fff" : "#000"; 
-    localStorage.setItem('theme', isNightMode ? 'dark' : 'light');
-  }, [isNightMode]); 
- 
   useEffect(() => {
     if (isNightMode) {
       document.body.classList.add('night');
     } else {
       document.body.classList.remove('night');
     }
+    console.log({ isNightMode });
 
+    document.body.style.backgroundColor = isNightMode ? "#333" : "#fff";
+    document.body.style.color = isNightMode ? "#fff" : "#000";
+    document.body.style.color = isNightMode ? "#fff" : "#000";
     localStorage.setItem('theme', isNightMode ? 'dark' : 'light');
   }, [isNightMode]);
+
+  // useEffect(() => {
+
+
+  //   localStorage.setItem('theme', isNightMode ? 'dark' : 'light');
+  // }, [isNightMode]);
 
 
   const titleColor = isNightMode ? "#fff" : "#000";
@@ -33,11 +36,11 @@ export const Switch = () => {
   return (
     <div className="container">
       <label className="switch">
-        <input 
-          type="checkbox" 
-          id="toggleSwitch" 
-          checked={isNightMode} 
-          onChange={() => setIsNightMode(!isNightMode)} 
+        <input
+          type="checkbox"
+          id="toggleSwitch"
+          checked={isNightMode}
+          onChange={() => setIsNightMode(!isNightMode)}
         />
         <div className="slider">
           <div className="sun"></div>
@@ -51,7 +54,7 @@ export const Switch = () => {
           <div className="star star5"></div>
         </div>
       </label>
-     
+
     </div>
   );
 };
